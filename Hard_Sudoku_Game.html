@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        <meta charset='utf-8'>
+        <title>Sudoku by Orel & Yonatan</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+
+</head>
+
+<!-- body tag with onload function to immediately load the Sudoku -->
+
+<body onload="randomBoard()">
+        <img id="sudoku_title" alt="Sudoku" src="sudoku_title.png">
+        <p>By Orel & Yonatan</p>
+
+        <h1>good luck!</h1>
+        <button onclick="location.href='level.html'" id="btn_level">Set Difficulty</button>
+        <br>
+        <br>
+        <!-- a table for the Sudoku, each cell contains a row number and column number -->
+        <table>
+                <tr>
+                        <td id="r0c0"><input id="input_r0c0" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                        <td id="r0c1"><input id="input_r0c1" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                        <td id="r0c2"><input id="input_r0c2" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                        <td id="r0c3"><input id="input_r0c3" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                        <td id="r0c4"><input id="input_r0c4" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                        <td id="r0c5"><input id="input_r0c5" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                        <td id="r0c6"><input id="input_r0c6" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                        <td id="r0c7"><input id="input_r0c7" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                        <td id="r0c8"><input id="input_r0c8" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                </tr>
+                <tr>
+                        <td id="r1c0"><input id="input_r1c0" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                        <td id="r1c1"><input id="input_r1c1" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                        <td id="r1c2"><input id="input_r1c2" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                        <td id="r1c3"><input id="input_r1c3" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                        <td id="r1c4"><input id="input_r1c4" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                        <td id="r1c5"><input id="input_r1c5" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                        <td id="r1c6"><input id="input_r1c6" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                        <td id="r1c7"><input id="input_r1c7" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                        <td id="r1c8"><input id="input_r1c8" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                </tr>
+                <tr>
+                        <td id="r2c0"><input id="input_r2c0" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                        <td id="r2c1"><input id="input_r2c1" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                        <td id="r2c2"><input id="input_r2c2" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                        <td id="r2c3"><input id="input_r2c3" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                        <td id="r2c4"><input id="input_r2c4" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                        <td id="r2c5"><input id="input_r2c5" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                        <td id="r2c6"><input id="input_r2c6" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                        <td id="r2c7"><input id="input_r2c7" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                        <td id="r2c8"><input id="input_r2c8" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                </tr>
+                <tr>
+                        <td id="r3c0"><input id="input_r3c0" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                        <td id="r3c1"><input id="input_r3c1" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                        <td id="r3c2"><input id="input_r3c2" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                        <td id="r3c3"><input id="input_r3c3" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                        <td id="r3c4"><input id="input_r3c4" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                        <td id="r3c5"><input id="input_r3c5" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                        <td id="r3c6"><input id="input_r3c6" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                        <td id="r3c7"><input id="input_r3c7" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                        <td id="r3c8"><input id="input_r3c8" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                </tr>
+                <tr>
+                        <td id="r4c0"><input id="input_r4c0" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                        <td id="r4c1"><input id="input_r4c1" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                        <td id="r4c2"><input id="input_r4c2" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                        <td id="r4c3"><input id="input_r4c3" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                        <td id="r4c4"><input id="input_r4c4" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                        <td id="r4c5"><input id="input_r4c5" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                        <td id="r4c6"><input id="input_r4c6" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                        <td id="r4c7"><input id="input_r4c7" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                        <td id="r4c8"><input id="input_r4c8" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                </tr>
+                <tr>
+                        <td id="r5c0"><input id="input_r5c0" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                        <td id="r5c1"><input id="input_r5c1" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                        <td id="r5c2"><input id="input_r5c2" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                        <td id="r5c3"><input id="input_r5c3" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                        <td id="r5c4"><input id="input_r5c4" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                        <td id="r5c5"><input id="input_r5c5" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                        <td id="r5c6"><input id="input_r5c6" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                        <td id="r5c7"><input id="input_r5c7" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                        <td id="r5c8"><input id="input_r5c8" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                </tr>
+                <tr>
+                        <td id="r6c0"><input id="input_r6c0" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                        <td id="r6c1"><input id="input_r6c1" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                        <td id="r6c2"><input id="input_r6c2" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                        <td id="r6c3"><input id="input_r6c3" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                        <td id="r6c4"><input id="input_r6c4" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                        <td id="r6c5"><input id="input_r6c5" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                        <td id="r6c6"><input id="input_r6c6" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                        <td id="r6c7"><input id="input_r6c7" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                        <td id="r6c8"><input id="input_r6c8" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                </tr>
+                <tr>
+                        <td id="r7c0"><input id="input_r7c0" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                        <td id="r7c1"><input id="input_r7c1" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                        <td id="r7c2"><input id="input_r7c2" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                        <td id="r7c3"><input id="input_r7c3" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                        <td id="r7c4"><input id="input_r7c4" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                        <td id="r7c5"><input id="input_r7c5" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                        <td id="r7c6"><input id="input_r7c6" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                        <td id="r7c7"><input id="input_r7c7" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                        <td id="r7c8"><input id="input_r7c8" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                </tr>
+                <tr>
+                        <td id="r8c0"><input id="input_r8c0" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                        <td id="r8c1"><input id="input_r8c1" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                        <td id="r8c2"><input id="input_r8c2" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                        <td id="r8c3"><input id="input_r8c3" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                        <td id="r8c4"><input id="input_r8c4" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                        <td id="r8c5"><input id="input_r8c5" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                        <td id="r8c6"><input id="input_r8c6" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                        <td id="r8c7"><input id="input_r8c7" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                        <td id="r8c8"><input id="input_r8c8" type="text"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="1">
+                        </td>
+                </tr>
+        </table>
+        <!-- An empty p tag to be later used if the user entered a wrong solution -->
+        <p id="game_valid"></p>
+
+        <!-- All the buttons in the game with their onclick functions associated with them -->
+        <button id="btn_solve" onclick="solveBoard()">Solve puzzle</button>
+        <button id="btn_finish" onclick='finishBoard()'>Finish</button>
+        <button id="btn_again" onclick='again()'>Again</button>
+        <button id="btn_check" onclick='checkBoard()'>Check</button>
+
+        <script src='script.js'></script>
+        <script>
+                // Function that takes the existing random Sudoku and applies different cells randomly into the HTML 
+                // by replacing the <input> tags in the HTML to <p> tags, the amount of numbers that will be given to
+                // the user will depend on the difficulty the user chose, easy = 75%, medium = 50%, hard = 25%
+
+                // Variable that rolls a random number between one to 100, which will later set the amount of random
+                // cells to be filled
+                const randNum = () => {
+                        let randomNum = Math.random() * 100
+                        return randomNum
+                }
+
+                const randomBoard = () => {
+                        for (let r = 0; r < 9; r++) {
+                                for (let c = 0; c < 9; c++) {
+                                        let cellid = document.getElementById(`r${r}c${c}`);
+                                        if (randNum() < 26) {
+                                                cellid.innerHTML = randomSudoku[r][c]
+                                        }
+                                }
+                        }
+                }
+
+        </script>
+
+</body>
+
+</html>
